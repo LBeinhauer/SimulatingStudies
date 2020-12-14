@@ -35,12 +35,12 @@ SimStudies2groups <-function(k.studies=100, meandiff=1, intercept=2, sd.meandiff
       X1 = rnorm(N[x], mean=intercept, sd=groupsd[x]),
       X2 = rnorm(N[x], mean=intercept+meanES[x], sd=groupsd[x]))
     })
-  # 
-  # for(i in 1:k.studies){
-  #   X1 <- rnorm(N[i], mean=intercept, sd=groupsd[i]) # sampling values for "control" goup 
-  #   X2 <- rnorm(N[i], mean=intercept+meanES[i], sd=groupsd[i]) # sampling values for "treatment" group
-  #   studies[[i]] <- data.frame(X1,X2)
-  # }
+
+  for(i in 1:k.studies){
+    X1 <- rnorm(N[i], mean=intercept, sd=groupsd[i]) # sampling values for "control" goup
+    X2 <- rnorm(N[i], mean=intercept+meanES[i], sd=groupsd[i]) # sampling values for "treatment" group
+    studies[[i]] <- data.frame(X1,X2)
+  }
   
   
   df <- as.data.frame(matrix(unlist(lapply(as.matrix(1:k.studies, ncol=1), FUN = function(x) {
