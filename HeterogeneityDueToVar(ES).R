@@ -1,5 +1,18 @@
-library(devtools)
-library(RCurl)
+### Lukas Beinhauer 16/12/20 ###
+
+#################################################################################################################################
+# Simulating data from multiple studies assessing the same effect. Treatment and control groups of equal sizes are simulated    #
+#  for each study. I^2, H^2 and tau^2 will be computed for each data set, simulated and various conditions of sampling variance #
+#  and effect size heterogeneity.                                                                                               #
+# Results are displayed graphically to enhance interpretation.                                                                  #
+#################################################################################################################################
+
+if (!require(devtools)) {
+  install.packages("devtools")
+}
+if (!require(RCurl)) {
+  install.packages("RCurl")
+}
 
 source_url("https://github.com/LBeinhauer/SimulatingStudies/blob/master/SimStudies.R?raw=TRUE") # hyperlink added with ?raw=TRUE
 

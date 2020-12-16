@@ -1,4 +1,4 @@
-# **Simulating Study Data (10/12/20)**
+# **Simulating Study Data (16/12/20)**
 ### Lukas Beinhauer
 
 This page contains an R-script, designed to simulate data from multiple studies. The goal is to assess meta-analytic estimates of heterogeneity, and the impact of various kinds of variance on such estimates.
