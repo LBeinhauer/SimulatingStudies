@@ -28,7 +28,7 @@ source_url("https://github.com/LBeinhauer/SimulatingStudies/blob/master/SimStudi
 
 # sd.meandiff = .5
 
-# pdf("simulatedHeterogeneityPlots.pdf")
+pdf("simulatedHeterogeneityPlots.pdf")
 
 group.vars <- seq(from=.01, to=5.005, by=.005)^2
 
