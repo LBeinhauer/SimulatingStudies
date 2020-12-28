@@ -12,7 +12,7 @@ library(metafor)
 ###  equal for each group. Number of studdies, mean-difference between group, group intercept, sd of group difference, sd of group data,
 ###  max and min of group sample sizes may be manipulated
 
-SimStudies2groups <-function(k.studies=100, meandiff=1, intercept=2, sd.meandiff=.5, mean.groupsd=2, sd.groupsd=.1, n.max=125, n.min=20){
+SimStudies2groups <-function(k.studies=100, meandiff=1, intercept=0, sd.meandiff=1, mean.groupsd=1, sd.groupsd=0, n.max=125, n.min=20){
   
   meanES <- rnorm(k.studies, mean=meandiff, sd=sd.meandiff) # sample difference between groups for each study
   

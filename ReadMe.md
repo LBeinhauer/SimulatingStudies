@@ -11,6 +11,6 @@ Currently, the following functions are contained:
 The following function is designed to simulate data from multiple studies, in order to assess the impact of various kinds of variances on measures of heterogeneity. Sample sizes are samples for each study, with small sample sizes being stronlgy favoured.
 
 Additionally, a second script "HeterogeneityDueToVar(ES).R" is included. This deals with the assessment of heterogeneity due to variance in the simulated Effect Sizes, in combination with a changing sampling variance. Its results, only graphical plots as of now, is found in "simulatedHeterogeneityPlots.pdf".
-Currently, some issues concerning the estimation of tau^2 seem to persist. The estimated tau^2 is NOT equal or equivalent to the variance of effect sizes fed to the simulation function (or the returned variance of mean difference). Var(meandiff) and tau^2 are linearly related, with a coefficient of about 16 atm.
+When inspecting the tau^2 estimates, it is possible to assess in how far these resemble the supplied vector of between-effect-variability. As the tau^2 measure is made from a SMD-model, the tau^2 values correspond with the supplied vector values at 1:1, whenever the variances are 1. For an example, see the last plot of the simulated "simulatedHeterogeneityPlots.pdf".
 
 The content of this script is subject to change, and will be developed over time.

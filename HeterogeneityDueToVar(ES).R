@@ -164,7 +164,7 @@ het.measures <- matrix(NA, nrow=length(ES.vars), ncol=3)
 
 pb = txtProgressBar(min = 0, max = length(ES.vars), initial = 0, style=3) 
 for(i in 1:length(ES.vars)){
-  X <- SimStudies2groups(k.studies=100, meandiff=1, intercept=2, sd.meandiff=sqrt(ES.vars[i]), mean.groupsd=.2, sd.groupsd=0, n.max=125, n.min=20)
+  X <- SimStudies2groups(k.studies=100, meandiff=1, intercept=0, sd.meandiff=sqrt(ES.vars[i]), mean.groupsd=.2, sd.groupsd=0, n.max=125, n.min=20)
   X.data[[i]] <- X
   
   rma.fit[[i]] <- rma(measure = "SMD", m1i = X$study.summary$mean.X2, m2i = X$study.summary$mean.X1, sd1i = X$study.summary$sd.X2, 
@@ -269,7 +269,7 @@ for(i in 1:length(ES.vars)){
 
 plot(ES.vars, het.measures[,1], main = "I^2 for mean.groupsd=1")
 plot(ES.vars, het.measures[,2], main = "H^2 for mean.groupsd=1", ylim=c(0,20))
-plot(ES.vars, het.measures[,3], main = "tau^2 for mean.groupsd=1", ylim=c(0,10))
+plot(ES.vars, het.measures[,3], main = "tau^2 for mean.groupsd=1", ylim=c(0,0.3))
 
 
 dev.off()
